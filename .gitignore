@@ -42,4 +42,4 @@ typings/
 # Ignore npmrc
 .npmrc
 
-dist
+# dist
