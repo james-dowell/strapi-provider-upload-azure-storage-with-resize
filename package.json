@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@azure/identity": "^4.0.0",
-    "@azure/storage-blob": "^12.12.0"
+    "@azure/storage-blob": "^12.12.0",
+    "sharp": "^0.33.3"
   },
   "strapi": {
     "isProvider": true

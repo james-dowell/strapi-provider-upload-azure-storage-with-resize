@@ -6,7 +6,8 @@ import {
     PublicAccessType,
     StorageSharedKeyCredential,
 } from '@azure/storage-blob';
-import internal from 'stream';
+import sharp from 'sharp';
+import internal, { Readable } from 'stream';
 
 type Config = DefaultConfig | ManagedIdentityConfig;
 
@@ -138,12 +139,13 @@ async function handleUpload(
         file.url = file.url.replace(`/${config.containerName}/`, '/');
     }
 
-    await client.uploadStream(
-        file.stream,
-        uploadOptions.bufferSize,
-        uploadOptions.maxBuffers,
-        options
-    );
+    const transformer = sharp().resize({ width: 1000, withoutEnlargement: true });
+
+    file.stream.pipe(transformer);
+    const buffer = await transformer.toBuffer();
+    const upload = Readable.from(buffer);
+
+    await client.uploadStream(upload, uploadOptions.bufferSize, uploadOptions.maxBuffers, options);
 }
 
 async function handleDelete(
