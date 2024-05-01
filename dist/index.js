@@ -85,7 +85,7 @@ function handleUpload(config, blobSvcClient, file) {
             config.removeCN == 'true') {
             file.url = file.url.replace(`/${config.containerName}/`, '/');
         }
-        const transformer = (0, sharp_1.default)().resize({ width: 200 });
+        const transformer = (0, sharp_1.default)().resize({ width: 1000, withoutEnlargement: true });
         file.stream.pipe(transformer);
         const buffer = yield transformer.toBuffer();
         const upload = stream_1.Readable.from(buffer);
