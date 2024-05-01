@@ -1,44 +1,44 @@
 {
-  "name": "strapi-provider-upload-azure-storage",
-  "version": "3.4.0",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "lint": "eslint . --ext .js,.ts",
-    "lint:fix": "eslint . --ext .js,.ts --fix",
-    "prebuild": "rm -rf dist",
-    "prepublishOnly": "yarn build"
-  },
-  "directories": {
-    "lib": "./lib"
-  },
-  "dependencies": {
-    "@azure/identity": "^4.0.0",
-    "@azure/storage-blob": "^12.12.0",
-    "sharp": "^0.33.3"
-  },
-  "strapi": {
-    "isProvider": true
-  },
-  "repository": "https://github.com/jakeFeldman/strapi-provider-upload-azure-storage",
-  "homepage": "http://strapi.io",
-  "keywords": [
-    "upload",
-    "azure",
-    "blob",
-    "strapi"
-  ],
-  "devDependencies": {
-    "@types/node": "^18.13.0",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
-    "eslint": "^8.34.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5"
-  }
+    "name": "strapi-provider-upload-azure-storage-with-resize",
+    "version": "3.4.0",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc -p tsconfig.json",
+        "lint": "eslint . --ext .js,.ts",
+        "lint:fix": "eslint . --ext .js,.ts --fix",
+        "prebuild": "rm -rf dist",
+        "prepublishOnly": "yarn build"
+    },
+    "directories": {
+        "lib": "./lib"
+    },
+    "dependencies": {
+        "@azure/identity": "^4.0.0",
+        "@azure/storage-blob": "^12.12.0",
+        "sharp": "^0.33.3"
+    },
+    "strapi": {
+        "isProvider": true
+    },
+    "repository": "https://github.com/jakeFeldman/strapi-provider-upload-azure-storage",
+    "homepage": "http://strapi.io",
+    "keywords": [
+        "upload",
+        "azure",
+        "blob",
+        "strapi"
+    ],
+    "devDependencies": {
+        "@types/node": "^18.13.0",
+        "@typescript-eslint/eslint-plugin": "^5.51.0",
+        "@typescript-eslint/parser": "^5.51.0",
+        "eslint": "^8.34.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-simple-import-sort": "^10.0.0",
+        "eslint-plugin-unused-imports": "^2.0.0",
+        "prettier": "^2.8.4",
+        "typescript": "^4.9.5"
+    }
 }
