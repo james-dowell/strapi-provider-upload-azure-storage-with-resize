@@ -1,5 +1,5 @@
 {
-    "name": "strapi-provider-upload-azure-storage-with-resize",
+    "name": "strapi-provider-upload-azure-storage",
     "version": "3.4.0",
     "license": "MIT",
     "main": "dist/index.js",
