@@ -139,7 +139,7 @@ async function handleUpload(
         file.url = file.url.replace(`/${config.containerName}/`, '/');
     }
 
-    const transformer = sharp().resize({ width: 1000, withoutEnlargement: true });
+    const transformer = sharp().resize({ width: 1100, withoutEnlargement: true });
 
     file.stream.pipe(transformer);
     const buffer = await transformer.toBuffer();
